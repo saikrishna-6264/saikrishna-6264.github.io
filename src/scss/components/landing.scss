@@ -1,0 +1,282 @@
+.landing {
+  height: 100%;
+  background-color: var(--bg-clr);
+
+  .main {
+    .content-left {
+      flex: 2;
+      padding-left: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: left;
+
+      .heading {
+        text-align: left;
+
+        h1 {
+          font-size: 3rem;
+          margin: 0px;
+        }
+      }
+
+      .mail {
+        color: orange;
+        font-weight: bold;
+      }
+
+      .exp {
+        h1 {
+          margin: 0;
+          font-size: 3rem;
+          font-weight: bold;
+        }
+
+        .content {
+          p {
+            padding: 5px 10px;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .content-right {
+      flex: 1;
+      padding-right: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: right;
+
+      .work-field {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .skills {
+    background-color: white;
+    .tech-list {
+      flex: 1;
+      padding: 10% 5% 10% 10%;
+      .tech-card {
+        margin: 15px;
+        display: flex;
+        padding: 15px 10px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 6px #e7e7e7;
+
+        .tech-icon {
+          margin: 15px 30px;
+          height: 75px;
+          width: 75px;
+          border-radius: 100px;
+        }
+
+        .content {
+          text-align: start;
+        }
+      }
+    }
+    .skills-content {
+      flex: 1;
+      padding: 10% 0px;
+      text-align: start;
+
+      .skill-comp {
+        flex: 1;
+        h1 {
+          margin: 5px 0px;
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  .experience {
+    padding: 10%;
+    box-sizing: border-box;
+
+    .heading {
+      margin: 0px 0px 30px 0px;
+      font-size: 3rem;
+    }
+
+    .content-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .content {
+        text-align: start;
+        margin: 0px;
+      }
+    }
+
+    .content-right {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .exp-card {
+        display: flex;
+        .dot-container {
+          width: 70px;
+          text-align: start;
+          margin: 0px;
+
+          .dots {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border: 2px dashed grey;
+
+            .dot {
+              margin: 10px;
+              height: 30px;
+              width: 30px;
+              border-radius: 50px;
+              background-color: grey;
+            }
+          }
+        }
+        .body {
+          flex: 1;
+          text-align: start;
+
+          h2 {
+            margin: 15px auto;
+          }
+        }
+      }
+    }
+  }
+
+  .work {
+    padding: 10%;
+    box-sizing: border-box;
+    background-color: white;
+
+    .heading {
+      text-align: start;
+    }
+
+    .more-work {
+      color: orange;
+    }
+
+    .projects-list {
+      display: flex;
+      margin-top: 5%;
+      overflow-x: scroll;
+
+      .product {
+        display: flex;
+        width: 350px;
+        min-height: 350px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0px 0px 8px rgb(223, 223, 223);
+      }
+    }
+  }
+
+  .clients {
+    padding: 5% 10%;
+    box-sizing: border-box;
+
+    .client-list {
+      padding: 10%;
+      display: flex;
+
+      .client-card {
+        width: 500px;
+        position: relative;
+        padding: 60px 50px 20px 50px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 6px #e0e0e0;
+        background-color: white;
+
+        .avatar-container {
+          position: absolute;
+          top: -50px;
+          width: 80%;
+
+          .avatar {
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 2px solid white;
+            box-shadow: 1px 2px 6px #e0e0e0;
+          }
+        }
+
+        .comment {
+          height: 150px;
+          font-size: 1.2rem;
+        }
+
+        p {
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+  .contact {
+    padding: 10%;
+    box-sizing: border-box;
+    background-color: white;
+
+    .heading-container {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: start;
+
+      .heading {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+
+      .description {
+        h1 {
+          font-size: 3rem;
+        }
+        a {
+          color: orange;
+        }
+      }
+    }
+
+    .info {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: start;
+    }
+  }
+}
+
+.footer {
+  padding: 20px;
+  display: flex;
+
+  .logo {
+    padding: 0px 20px;
+    height: 35px;
+    border-right: 2px solid grey;
+  }
+
+  .rights {
+    margin: 7.5px auto;
+    padding: 0px 20px;
+  }
+}

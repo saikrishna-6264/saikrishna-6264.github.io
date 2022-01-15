@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  background-color: var(--bg-clr);
+
+  .logo {
+    .logo-img {
+      padding: 10px 50px;
+      height: 50px;
+    }
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+  }
+}
