@@ -3,6 +3,8 @@
   background-color: var(--bg-clr);
 
   .main {
+    background: url("../..//sai.png") no-repeat center;
+    background-size: 90%;
     .content-left {
       flex: 2;
       padding-left: 10%;
@@ -13,7 +15,8 @@
 
       .heading {
         text-align: left;
-
+        transform: translateX(-100%);
+        animation: slid-right 1s ease-in-out forwards;
         h1 {
           font-size: 3rem;
           margin: 0px;
@@ -23,9 +26,14 @@
       .mail {
         color: orange;
         font-weight: bold;
+        transform: translateX(-100%);
+        animation: slid-right 1s 0.25s ease-in-out forwards;
       }
 
       .exp {
+        transform: translateX(-100%);
+        animation: slid-right 1s 0.5s ease-in-out forwards;
+
         h1 {
           margin: 0;
           font-size: 3rem;
@@ -49,7 +57,25 @@
       justify-content: space-evenly;
       align-items: right;
 
+      .qoute-container {
+        transform: translateX(200%);
+        animation: slid-left 1s 0.75s ease-in-out forwards;
+        display: flex;
+        flex-direction: column;
+        .qoute {
+          max-width: 350px;
+          font-size: 1rem;
+          font-style: italic;
+          color: var(--clr-primary-1);
+        }
+        .author {
+          text-align: right;
+        }
+      }
+
       .work-field {
+        transform: translateX(200%);
+        animation: slid-left 1s 1s ease-in-out forwards;
         p {
           text-align: center;
         }
@@ -59,6 +85,8 @@
 
   .skills {
     background-color: white;
+    display: flex;
+    align-items: center;
     .tech-list {
       flex: 1;
       padding: 10% 5% 10% 10%;
@@ -68,30 +96,40 @@
         padding: 15px 10px;
         border-radius: 25px;
         box-shadow: 0px 0px 6px #e7e7e7;
-
-        .tech-icon {
-          margin: 15px 30px;
-          height: 75px;
-          width: 75px;
+        &:hover {
+          .tech-icon {
+            transform: scale(1.2);
+          }
+        }
+        .tech-icon-container {
+          margin: 15px;
+          height: 90px;
+          width: 90px;
           border-radius: 100px;
+
+          .tech-icon {
+            margin: 20px;
+            height: 50px;
+            width: 50px;
+            transition: all 0.5s ease-in-out;
+          }
         }
 
         .content {
           text-align: start;
+          width: 100%;
         }
       }
     }
     .skills-content {
       flex: 1;
       padding: 10% 0px;
-      text-align: start;
-
-      .skill-comp {
-        flex: 1;
-        h1 {
-          margin: 5px 0px;
-          font-size: 4rem;
-        }
+      text-align: center;
+      h1 {
+        max-width: 500px;
+      }
+      p {
+        max-width: 500px;
       }
     }
   }
@@ -101,6 +139,7 @@
     box-sizing: border-box;
 
     .heading {
+      text-align: center;
       margin: 0px 0px 30px 0px;
       font-size: 3rem;
     }
@@ -110,6 +149,15 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      .work-card {
+        display: flex;
+        .work-img {
+          margin: auto 20px;
+          height: 80px;
+          width: 80px;
+          border-radius: 40px;
+        }
+      }
       .content {
         text-align: start;
         margin: 0px;
@@ -117,22 +165,53 @@
     }
 
     .content-right {
-      width: 60%;
+      width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-evenly;
       .exp-card {
         display: flex;
+
+        &:hover {
+          .ani-grn-col {
+            .dots {
+              transform: rotate(180deg) !important;
+              border-color: #286f6c !important;
+            }
+            .line {
+              border-color: #286f6c !important;
+            }
+          }
+          .ani-red-col {
+            .dots {
+              transform: rotate(180deg) !important;
+              border-color: #f26440 !important;
+            }
+            .line {
+              border-color: #f26440 !important;
+            }
+          }
+          .ani-orn-col {
+            .dots {
+              transform: rotate(180deg) !important;
+              border-color: #eec048 !important;
+            }
+            .line {
+              border-color: #eec048 !important;
+            }
+          }
+        }
         .dot-container {
-          width: 70px;
+          width: 55px;
           text-align: start;
-          margin: 0px;
+          margin-right: 20px;
 
           .dots {
             height: 50px;
             width: 50px;
             border-radius: 50px;
             border: 2px dashed grey;
+            transition: 0.5s all ease-in-out;
 
             .dot {
               margin: 10px;
@@ -142,8 +221,15 @@
               background-color: grey;
             }
           }
+          .line {
+            height: calc(100% - 55px);
+            width: 50%;
+            border-right: 2px dashed grey;
+            transition: 0.2s all ease-in-out;
+          }
         }
         .body {
+          max-width: 500px;
           flex: 1;
           text-align: start;
 
@@ -174,6 +260,7 @@
       overflow-x: scroll;
 
       .product {
+        margin: 5px;
         display: flex;
         width: 350px;
         min-height: 350px;
@@ -204,6 +291,8 @@
           position: absolute;
           top: -50px;
           width: 80%;
+          display: flex;
+          justify-content: center;
 
           .avatar {
             height: 100px;
@@ -220,6 +309,12 @@
         }
 
         p {
+          margin: 5px;
+        }
+
+        .client-info {
+          display: flex;
+          justify-content: space-between;
           margin: 5px;
         }
       }
@@ -278,5 +373,117 @@
   .rights {
     margin: 7.5px auto;
     padding: 0px 20px;
+  }
+}
+
+@media screen and (max-width: $mobile-landscape) {
+  * {
+    font-size: 16px;
+  }
+  .main {
+    background-size: 280% !important;
+    background-position: bottom !important;
+
+    .split {
+      padding-top: 80px;
+      flex-direction: column !important;
+      height: auto;
+      .content-left {
+        height: 20% !important;
+        justify-content: space-between !important;
+        padding-left: 5%;
+
+        .heading {
+          align-self: flex-start;
+          h1 {
+            font-size: 2rem;
+          }
+        }
+        .mail {
+          display: none;
+        }
+        .exp {
+          display: none;
+        }
+      }
+      .content-right {
+        .qoute-container {
+          margin: auto 5%;
+          max-width: 90vh;
+          .author {
+            margin: 0%;
+          }
+        }
+        .work-field {
+          display: none;
+        }
+      }
+    }
+  }
+  .skills {
+    height: auto !important;
+    flex-direction: column-reverse !important;
+    .tech-list {
+      padding: 0px !important;
+    }
+    .skills-content {
+      padding: 15px !important;
+    }
+  }
+
+  .experience {
+    height: auto !important;
+    padding: 5% !important;
+    .heading {
+      font-size: 1.6rem !important;
+    }
+    .split {
+      flex-direction: column;
+      .content-left {
+        .work-card {
+          .work-img {
+            height: 50px !important;
+            width: 50px !important;
+          }
+          text-align: center;
+        }
+      }
+
+      .content-right {
+        width: 100% !important;
+        margin-top: 20px;
+      }
+    }
+  }
+  .work {
+    height: auto !important;
+    padding: 5% !important;
+  }
+  .clients {
+    height: auto !important;
+    padding: 5% !important;
+    .heading {
+      font-size: 1.4rem;
+    }
+    .client-list {
+      margin-top: 50px;
+    }
+  }
+  .contact {
+    height: auto !important;
+    padding: 5% !important;
+
+    .split {
+      flex-direction: column;
+
+      .info {
+        width: 100% !important;
+        flex-direction: row;
+
+        .content {
+          display: none;
+        }
+      }
+    }
   }
 }

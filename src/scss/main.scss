@@ -1,3 +1,7 @@
+* {
+  font-family: "Heebo", sans-serif;
+}
+
 .spacer {
   flex: 1;
 }
@@ -16,4 +20,22 @@
 
 .mx-h {
   height: 100%;
+}
+
+@keyframes slid-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slid-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
